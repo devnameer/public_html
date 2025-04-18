@@ -30,7 +30,7 @@
             font-family: 'EurostileBQ' !important;
         }
         #main {
-            background-image: url('./images/Homepage.png'); /* Replace with your actual image */
+            background-image: url('https://marsspace.ae/images/Homepage.png'); /* Replace with your actual image */
             background-size: cover;
             background-attachment: fixed;
             background-position: top;
@@ -174,15 +174,41 @@
             50% { transform: translateY(10px); opacity: 0.4; }
             100% { transform: translateY(0); opacity: 0.8; }
         }
+        /* tablet */
+        @media screen and (min-width:768px) {
+            
+        }
+
+        /* mobile */
+        @media  screen and (max-width:800px){
+            .test-class{
+                
+                font-size:smaller;
+                display: flex;
+                flex-direction: row;
+                gap:10px;
+
+            }
+
+            .footer{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+
+            }
+        }
+    
+
+
     </style>
 </head>
 <body class="text-white font-sans">
     <div id="main">
-        <header class="flex justify-center items-center p-6 absolute w-full mt-8">
-            <nav>
-                <ul class="flex space-x-24">
+        <header class=" justify-center items-center p-6 md:p-2 flex absolute w-full mt-8">
+            <nav>   
+                <ul class="flex lg:space-x-24 test-class">
                     <li><a href="./">
-                        <span class="text" id="textForD">
+                        <span class="" id="textForD">
                             Home
                         </span>
                     </a></li>
@@ -217,7 +243,7 @@
         </header>
         
         <main class="flex flex-col justify-center h-screen px-16 ml-[250px]">
-            <h1 class="text-9xl font-light mt-[200px]" id="textForE">MARS</h1>
+            <h1 class="sm:text-2xl md:text-4xl lg:text-9xl font-light mt-[200px]" id="textForE">MARS</h1>
             <p class="mt-4 text-lg" id="textForP">At Mars Space Interiors, we design visionary, <br> sustainable spaces that redefine living.</p>
             <!-- <img src="./svg/butonMain.svg" alt="" width="195px" height="10px" class="mt-[100px]"> -->
             <a href="tel:+971589653760">
@@ -537,8 +563,8 @@
 
     </div> -->
 
-    <footer class="justify-center items-center h-screen bg-black text-white">
-        <div class="grid grid-cols-5 gap-4 p-8 text-center">
+    <footer class="footer lg:justify-center lg:"items-center h-screen bg-black text-white">
+        <div class="flex lg:flex-row sm:flex-col md:flex-col sm:items-center sm:justify-center">
             <div class="mt-[100px]">
                 <h3 class="text-xl font-semibold mb-2 mr-[40px] tracking-[4px] text-[#fcfad8]">PHONE</h3>
                 <ul>

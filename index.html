@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Space Interiors</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: 'Deradioh';
+            src: url('./font/Deradioh.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'EurostileBQ';
+            src: url('./font/EurostileBQ-Extended.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Futura';
+            src: url('./font/FuturaBkBTBook.ttf') format('truetype');
+        }
+        body {
+            font-family: 'Deradioh' !important;
+        }
+        p{
+            font-family: 'EurostileBQ' !important;
+        }
+        #main {
+            background-image: url('./images/Homepage.png'); /* Replace with your actual image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: top;
+            background-repeat: no-repeat;
+            margin-top: 0;
+        }
+        #logo {
+            width: 80px !important;
+            margin-top: -25px !important;
+        }
+        #btn {
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+         a>span{
+            font-size: 25px;
+        }
+        #What {
+            background-image: url('./images/construtin.jpg'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #Project{
+            background-image: url('./images/crane.jpg'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #Partners {
+            background-image: url('./images/PartnersBg.png'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #Projects {
+            background-image: url('./images/projectbg.png'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #partnersImage {
+            width: 1000px;
+            height: 1200px;
+            object-fit: cover;
+        }
+        #projectFg {
+            width: 800px;
+            height: 800px;
+            object-fit: cover;
+        }
+        #sub {
+            background-image: url('./images/subiusdiary.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000000;
+            height: 20vh;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        #sub:hover {
+            filter: grayscale(0%);
+        }
+        #Jack {
+            background-image: url('./images/JACKADVERBG.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000000;
+            height: 80vh;
+        }
+        #jackFg {
+            width: 800px;
+            height: 700px;
+            object-fit: cover;
+            margin-top: -150px;
+        }
+        footer {
+            background-image: url('./images/footer.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000000;
+            /* height: 40vh; Reduced height */
+            background-size: 100% 100%; /* Reduced width */
+            height: 100vh;
+        }
+        #gov{
+            background-image: url('./images/UAE-GOVT-APPROVEL-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .text {
+            transform: translateX(-50%);
+            font-weight: bold;
+            /* color: #ffb400; */
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .text:hover {
+            text-shadow: 0 0 10px #ffb400, 0 0 20px #ffb400;
+        }
+        .text:hover::before {
+            content: "[";
+            transition: all 0.3s ease-in-out;
+            margin-right: 10px;
+        }
+        .text:hover::after {
+            content: "]";
+            transition: all 0.3s ease-in-out;
+            margin-left: 10px;
+        }
+        #textForD{
+            font-family: 'Deradioh' !important;
+            font-size: 26;
+            font-weight: 100;
+        }
+        #textForE{
+            font-family: 'EurostileBQ' !important;
+            font-size: 110px;
+            font-weight: 100;
+            color: #fcfad8;
+        }
+        #textForP{
+            font-family: 'Futura' !important;
+            font-size: 25px;
+            font-weight: 100;
+            color: #fcfad8;
+        }
+
+        .mouse-icon {
+            opacity: 0.8;
+            animation: mouse-scroll 1.5s infinite;
+        }
+        @keyframes mouse-scroll {
+            0% { transform: translateY(0); opacity: 0.8; }
+            50% { transform: translateY(10px); opacity: 0.4; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="text-white font-sans">
+    <div id="main">
+        <header class="flex justify-center items-center p-6 absolute w-full mt-8">
+            <nav>
+                <ul class="flex space-x-24">
+                    <li><a href="./">
+                        <span class="text" id="textForD">
+                            Home
+                        </span>
+                    </a></li>
+                    <li><a href="./services.html">
+                        <span class="text" id="textForD">
+                            Services
+                        </span>
+                    </a></li>
+                    <li><a href="./project.html">
+                        <span class="text" id="textForD">
+                            Projects
+                        </span>
+                    </a></li>
+                    <img id="logo" src="./images/logo.png" alt="">
+                    <li><a href="#gov">
+                        <span class="text" id="textForD">
+                            Authority Approval
+                        </span>
+                    </a></li>
+                    <!-- <li><a href="#">
+                        <span class="text" id="textForD">
+                            Products
+                        </span>
+                    </a></li> -->
+                    <li><a href="./career.html">
+                        <span class="text" id="textForD">
+                            Career
+                        </span>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="flex flex-col justify-center h-screen px-16 ml-[250px]">
+            <h1 class="text-9xl font-light mt-[200px]" id="textForE">MARS</h1>
+            <p class="mt-4 text-lg" id="textForP">At Mars Space Interiors, we design visionary, <br> sustainable spaces that redefine living.</p>
+            <!-- <img src="./svg/butonMain.svg" alt="" width="195px" height="10px" class="mt-[100px]"> -->
+            <a href="tel:+971589653760">
+                <button class="mt-6 px-6 py-3 w-[230px] bg-white text-black font-medium uppercase tracking-widest shadow-lg mt-[216px]  hover:bg-[#dd780b] hover:text-white hover:shadow-[0_0_25px_rgba(255,180,0,0.8)] transition-all duration-300 hover:scale-105 hover:glow-gold">
+                    Schedule A Call
+                </button>
+            </a>
+            <div class="flex justify-center w-full ml-[-100px] mt-[100px]">
+                <img src="./svg/Asset-101.svg" alt="" width="30px" class="mt-4 mouse-icon">
+            </div>
+            <!-- <svg>
+                <defs>
+                    <style>
+                        .mouse-icon {
+                            opacity: 0.8;
+                            animation: mouse-scroll 1.5s infinite;
+                        }
+                        @keyframes mouse-scroll {
+                            0% { transform: translateY(0); opacity: 0.8; }
+                            50% { transform: translateY(10px); opacity: 0.4; }
+                            100% { transform: translateY(0); opacity: 0.8; }
+                        }
+                    </style>
+                </defs>
+                <g class="mouse-icon">
+                    <path fill="#ffffff" d="M12,5 L12,19" stroke="#ffffff" stroke-width="2"/>
+                    <path fill="#ffffff" d="M12,2 C14.7614,2 17,4.23858 17,7 L17,13 C17,15.7614 14.7614,18 12,18 C9.23858,18 7,15.7614 7,13 L7,7 C7,4.23858 9.23858,2 12,2 Z" stroke="#ffffff" stroke-width="2"/>
+                    <path fill="#ffffff" d="M12,16 L8,12 L16,12 L12,16 Z" stroke="#ffffff"/>
+                </g>
+            </svg> -->
+            <!-- <button class="relative px-6 py-3 w-[246px] bg-white text-[#623A21] font-semibold uppercase tracking-wide shadow-lg 
+                before:absolute before:top-0 before:right-0 before:w-4 before:h-full before:bg-white 
+                before:skew-x-[-10deg] before:origin-bottom-right before:z-[-1]">
+                Schedule A Call
+            </button> -->
+    
+    
+        </main>
+
+        <aside class="absolute space-y-24 right-8 bottom-[23rem] text-lg mr-[150px]">
+            <div class="mb-2 text-2xl transition-transform duration-500" id="num1">00</div>
+            <div class="mb-2 text-2xl transition-transform duration-500" id="num2">00</div>
+            <div class="mb-2 text-2xl transition-transform duration-500" id="num3">00</div>
+        </aside>
+        <aside class="absolute mt-[-50px] mr-[30px] right-4 text-lg mt-[-30px]">
+            <div class="mb-2 text-2xl">BUILD BEYOND</div>
+        </aside>
+    </div>
+    <div id="What">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[-150px] ml-[100px]">
+            <h2 class="text-[70px] font-light" style="color: #fcfad8;">What We Offer</h2>
+            <p class="mt-4 text-lg" id="textForP">Crafting innovative and personalized interiors that <br> inspire and elevate everyday living.</p>
+            <a href="./services.html">
+
+                <button class="mt-6 px-6 py-3 w-[230px] bg-white text-black font-medium uppercase tracking-widest shadow-lg mt-[216px]  hover:bg-[#dd780b] hover:text-white hover:shadow-[0_0_25px_rgba(255,180,0,0.8)] transition-all duration-300 hover:scale-105 hover:glow-gold">
+                    Read More
+                </button>
+            </a>
+            </div>
+            <!-- <div class="flex-1 h-screen">
+                <img src="./images/WHATWE.png" alt="What We Do" class="w-[3500px] h-full object-cover">
+            </div> -->
+        </section>
+    </div>
+    <div id="Project">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[50px] ml-[100px]">
+            <h2 class="text-[70px] font-light" style="color: #fcfad8;">
+                <span id="PNO" class="text-9xl">0</span><span class="text-9xl">+</span> <br> Projects
+            </h2>
+            <script>
+                function animateNumber(element, start, end, duration) {
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        element.textContent = Math.floor(progress * (end - start) + start);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+
+                function isElementInViewport(el) {
+                    const rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const pnoElement = document.getElementById('PNO');
+                    const onScroll = () => {
+                        if (isElementInViewport(pnoElement)) {
+                            animateNumber(pnoElement, 0, 150, 2000); // Animate from 0 to 150 in 2 seconds
+                            window.removeEventListener('scroll', onScroll);
+                        }
+                    };
+                    window.addEventListener('scroll', onScroll);
+                    onScroll(); // Check if the element is already in view
+                });
+            </script>
+            <h2 class="text-[70px] font-light" style="color: #fcfad8;">
+                <span id="BNO" class="text-9xl">0</span><br> BUILD UP AREA
+            </h2>
+            <script>
+                function animateNumber(element, start, end, duration) {
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        const currentNumber = Math.floor(progress * (end - start) + start);
+                        element.textContent = currentNumber.toLocaleString();
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const bnoElement = document.getElementById('BNO');
+                    const onScroll = () => {
+                        if (isElementInViewport(bnoElement)) {
+                            animateNumber(bnoElement, 0, 15890, 2000); // Animate from 0 to 15890 in 2 seconds
+                            window.removeEventListener('scroll', onScroll);
+                        }
+                    };
+                    window.addEventListener('scroll', onScroll);
+                    onScroll(); // Check if the element is already in view
+                });
+            </script>
+            <!-- <button id="btn" class="mt-6 px-6 py-3 w-[200px] bg-white text-black font-medium uppercase tracking-widest rounded shadow-lg mt-[116px]">
+                Read More
+            </button> -->
+            </div>
+            <!-- <div class="flex-1 h-screen">
+                <img src="./images/WHATWE.png" alt="What We Do" class="w-[3500px] h-full object-cover">
+            </div> -->
+        </section>
+    </div>
+    <div id="Partners">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[-250px] ml-[100px]">
+                <h2 class="text-[70px] font-light" style="color: #fcfad8;">Why Us?</h2>
+                <p class="mt-4 text-lg leading-8" id="textForP">
+                    CertifiedExcellence: We are proudly certified by UAE government authorities,<br>
+                    including DEWA, Dubai Muncipality
+                    (DCM), and Civil Defence, ensuring our compliance with the
+                    highest industry standards.
+                </p>
+                <!-- <button id="btn" class="mt-6 px-6 py-3 w-[200px] bg-white text-black font-medium uppercase tracking-widest rounded shadow-lg mt-[100px]">
+                    Read More
+                </button> -->
+                <!-- <div class="mt-[150px]">
+                    <div class="flex flex-row bg-black bg-opacity-60 p-4 space-x-4 w-[459px]">
+                        <div class="border-r border-white pr-4">
+                            <h6>DCD</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>DM</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>DEWA</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>SEWA</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>TRAKHEES</h6>
+                        </div>
+                        <div class="pr-4">
+                            <h6>FEWA</h6>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="flex-1">
+                <img src="./images/partnersforeground.png" alt="Partners" id="partnersImage">
+            </div>
+        </section>
+    </div>
+    <div id="gov">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[-100px] ml-[100px]">
+                <h2 class="text-[70px] font-light" style="color: #fcfad8;">Approved By UAE Government</h2>
+                <p class="mt-4 text-lg leading-8" id="textForP">
+                    From luxury residential spaces to high-end commercial projects,
+                    our expertise <br> lies in transforming visions into reality. Certified
+                    by UAE authorities, we uphold <br> the highest standards of craftsmanship,
+                    ensuring that every detail reflects excellence.
+                </p>
+                <!-- <button id="btn" class="mt-6 px-6 py-3 w-[200px] bg-white text-black font-medium uppercase tracking-widest rounded shadow-lg mt-[100px]">
+                    Read More
+                </button> -->
+                <div class="mt-[150px] relative w-[600px] overflow-hidden">
+                    <div class="carousel-container flex transition-transform duration-500" id="carousel">
+                        <!-- Slide 1 -->
+                        <div class="min-w-full grid grid-cols-3 gap-8">
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-11aa.svg" alt="DCD" class="w-[50px] object-contain">
+                            </div>
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-31aa.svg" alt="DM" class="w-[500px] object-contain">
+                            </div>
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-41aa.svg" alt="DEWA" class="w-[50px] object-contain">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="min-w-full grid grid-cols-3 gap-8">
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-91aa.svg" alt="SEWA" class="w-[50px] object-contain">
+                            </div>
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-71aa.svg" alt="TRAKHEES" class="w-[500px] mt-[50px] object-contain">
+                            </div>
+                            <div class="flex items-center justify-center p-4 bg-[#fcfad8] rounded-lg">
+                                <img src="./svg/Asset-61aa.svg" alt="FEWA" class="h-16 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 text-white" onclick="moveCarousel(-1)">❮</button>
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 text-white" onclick="moveCarousel(1)">❯</button>
+                </div>
+
+                <script>
+                    let currentSlide = 0;
+                    const carousel = document.getElementById('carousel');
+
+                    function moveCarousel(direction) {
+                        const slides = document.querySelectorAll('.carousel-container > div');
+                        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+                        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    }
+
+                    // Auto-advance every 3 seconds
+                    setInterval(() => moveCarousel(1), 3000);
+                </script>
+            </div>
+            <div class="flex-1">
+                <img src="./images/Asset-801.png" alt="Partners" class="w-[800px]">
+            </div>
+        </section>
+    </div>
+    <div id="Projects">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[50px] ml-[100px]">
+                <h2 class="text-6xl font-light text-[#fcfad8]">
+                    Seamless and
+                    high-quality execution
+
+                </h2>
+                <p class="mt-4 text-lg" id="textForP">
+                    At MSC, we take a approach to interior design, managing
+                    every project from concept to completion with precision
+                    and creativity. Our process begins with understanding
+                    your vision, requirements, and space dynamics.
+                </p>
+                <a href="./project.html">
+
+                    <button class="mt-6 px-6 py-3 w-[230px] bg-white text-black font-medium uppercase tracking-widest shadow-lg mt-[216px]  hover:bg-[#dd780b] hover:text-white hover:shadow-[0_0_25px_rgba(255,180,0,0.8)] transition-all duration-300 hover:scale-105 hover:glow-gold">
+                        View Projects
+                    </button>
+                </a>
+                <!-- <div class="mt-[150px]">
+                    <div class="flex flex-row bg-black bg-opacity-60 p-4 space-x-4 w-[459px]">
+                        <div class="border-r border-white pr-4">
+                            <h6>DCD</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>DM</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>DEWA</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>SEWA</h6>
+                        </div>
+                        <div class="border-r border-white pr-4">
+                            <h6>TRAKHEES</h6>
+                        </div>
+                        <div class="pr-4">
+                            <h6>FEWA</h6>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="flex-1">
+                <img src="./images/bed-room.png" alt="Partners" id="projectFg">
+            </div>
+        </section>
+    </div>
+
+    <!-- <div id="sub"> -->
+        <!-- Jack -->
+    <!-- </div> -->
+    <!-- <div id="Jack">
+        <section class="flex justify-center items-center h-screen">
+            <div class="flex flex-1 flex-col items-start p-8 mt-[-200px] ml-[100px]">
+                <h2 class="text-4xl font-light">Jack Advert</h2>
+                <p class="max-w-md mt-4 text-lg">is a subsidiary of Mars Space, showcasing expertise and synergy in design and creative solutions.</p>
+                <button class="mt-6 px-6 py-3 w-[250px] bg-white text-black font-medium uppercase tracking-widest rounded-lg shadow-lg">
+                    EXPLORE OUR WORK
+                </button>
+            </div>
+            <div class="flex-1">
+                <img src="./images/projectfg.png" alt="Partners" id="jackFg">
+            </div>
+        </section>
+
+    </div> -->
+
+    <footer class="justify-center items-center h-screen bg-black text-white">
+        <div class="grid grid-cols-5 gap-4 p-8 text-center">
+            <div class="mt-[100px]">
+                <h3 class="text-xl font-semibold mb-2 mr-[40px] tracking-[4px] text-[#fcfad8]">PHONE</h3>
+                <ul>
+                    <li><a href="#" id="textForP" style="font-size: 20px;" class="text-justify">+971589653760</a></li>
+                </ul>
+            </div>
+            <div class="mt-[100px]">
+                <h3 class="text-xl font-semibold mb-2 mr-[85px] tracking-[4px] text-[#fcfad8]">E-MAIL</h3>
+                <ul>
+                    <li><a href="#" id="textForP" style="font-size: 20px;">info@marsspace.ae</a></li>
+                </ul>
+            </div>
+            <div class="mt-[100px] ml-[60px]">
+                <h3 class="text-xl font-semibold mb-2 text-justify tracking-[4px] text-[#fcfad8]">LOCATION</h3>
+                <ul>
+                    <li>
+                        <p class="text-justify" id="textForP" style="font-size: 20px;">GF-24, AL Safiya building, <br> Dubai, UAE</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-[100px] ml-[60px]">
+                <h3 class="text-xl font-semibold mb-2 text-justify tracking-[4px] text-[#fcfad8]">SERVICES</h3>
+                <ul>
+                    <li><a href="#"><p class="text-justify" id="textForP" style="font-size: 20px;">FIT-OUT Contractor</p></a></li>
+                    <li><a href="#"><p class="text-justify" id="textForP" style="font-size: 20px;">Interior Design</p></a></li>
+                    <li><a href="#"><p class="text-justify" id="textForP" style="font-size: 20px;">Construction Contract</p></a></li>
+                </ul>
+                <!-- <div class="mt-[50px]">
+                    <h3 class="text-xl font-semibold mb-2 text-justify">PRODUCT</h3>
+                    <ul>
+                        <li><a href="#"><p class="text-justify">Branding</p></a></li>
+                        <li><a href="#"><p class="text-justify">Packging Design</p></a></li>
+                        <li><a href="#"><p class="text-justify">3D Visualization</p></a></li>
+                        <li><a href="#"><p class="text-justify">Animation</p></a></li>
+                        <li><a href="#"><p class="text-justify">More</p></a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="mt-[100px]">
+                <h3 class="text-xl font-semibold mb-2 tracking-[4px] text-[#fcfad8]">GET SOCIAL</h3>
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="https://www.instagram.com/marspaceinteriors/?hl=en" target="_blank"><img src="./images/instagram.png" alt="" class="w-8"></a></li>
+                    <li><a href="#"><img src="./images/facebook.png" alt="" class="w-8"></a></li>
+                    <li><a href="#"><img src="./images/whatsapp.png" alt="" class="w-8"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function getRandomNumber() {
+        return ('0' + Math.floor(Math.random() * 99 + 1)).slice(-2);
+        }
+        function updateNumbers() {
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const num3 = document.getElementById('num3');
+
+        num1.classList.add('transform', 'translate-y-[-100%]', 'opacity-0');
+        num2.classList.add('transform', 'translate-y-[-100%]', 'opacity-0');
+        num3.classList.add('transform', 'translate-y-[-100%]', 'opacity-0');
+
+        setTimeout(() => {
+            num1.textContent = `-${getRandomNumber()}`;
+            num2.textContent = `-${getRandomNumber()}`;
+            num3.textContent = `-${getRandomNumber()}`;
+
+            num1.classList.remove('translate-y-[-100%]', 'opacity-0');
+            num2.classList.remove('translate-y-[-100%]', 'opacity-0');
+            num3.classList.remove('translate-y-[-100%]', 'opacity-0');
+            num1.classList.add('translate-y-[0]', 'opacity-100');
+            num2.classList.add('translate-y-[0]', 'opacity-100');
+            num3.classList.add('translate-y-[0]', 'opacity-100');
+        }, 500);
+        }
+        setInterval(updateNumbers, 1000); // Update every 2 seconds
+        updateNumbers(); // Initial call to set numbers immediately
+    </script>
+</body>
+</html>

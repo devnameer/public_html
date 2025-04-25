@@ -42,13 +42,13 @@ p{
     font-size: 25px;
 }
 #What {
-    background-image: url('./images/construtin.jpg'); /* Replace with your actual image */
+    background-image: url('https://marsspace.ae/images/construtin.jpg'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 #Project{
-    background-image: url('./images/crane.jpg'); /* Replace with your actual image */
+    background-image: url('https://marsspace.ae/images/crane.jpg'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ p{
     background-repeat: no-repeat;
 }
 #Projects {
-    background-image: url('./images/projectbg.png'); /* Replace with your actual image */
+    background-image: url(''); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,7 +153,7 @@ footer {
 }
 #textForP{
     font-family: 'Futura' !important;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 100;
     color: #fcfad8;
 }

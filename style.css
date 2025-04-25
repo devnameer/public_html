@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Deradioh';
+    src: url('./font/Deradioh.otf') format('opentype');
+}
+@font-face {
+    font-family: 'EurostileBQ';
+    src: url('./font/EurostileBQ-Extended.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('./font/FuturaBkBTBook.ttf') format('truetype');
+}
+body {
+    font-family: 'Deradioh' !important;
+}
+p{
+    font-family: 'EurostileBQ' !important;
+}
+#main {
+    background-image: url('https://marsspace.ae/images/Homepage.png'); /* Replace with your actual image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+#logo {
+    width: 80px !important;
+    margin-top: -25px !important;
+}
+#btn {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+    a>span{
+    font-size: 25px;
+}
+#What {
+    background-image: url('./images/construtin.jpg'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Project{
+    background-image: url('./images/crane.jpg'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Partners {
+    background-image: url('./images/PartnersBg.png'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Projects {
+    background-image: url('./images/projectbg.png'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#partnersImage {
+    width: 1000px;
+    height: 1200px;
+    object-fit: cover;
+}
+#projectFg {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+}
+#sub {
+    background-image: url('./images/subiusdiary.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    height: 20vh;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+#sub:hover {
+    filter: grayscale(0%);
+}
+#Jack {
+    background-image: url('./images/JACKADVERBG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    height: 80vh;
+}
+#jackFg {
+    width: 800px;
+    height: 700px;
+    object-fit: cover;
+    margin-top: -150px;
+}
+footer {
+    background-image: url('./images/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    /* height: 40vh; Reduced height */
+    background-size: 100% 100%; /* Reduced width */
+    height: 100vh;
+}
+#gov{
+    background-image: url('./images/UAE-GOVT-APPROVEL-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.text {
+    transform: translateX(-50%);
+    font-weight: bold;
+    /* color: #ffb400; */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.text:hover {
+    text-shadow: 0 0 10px #ffb400, 0 0 20px #ffb400;
+}
+.text:hover::before {
+    content: "[";
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+}
+.text:hover::after {
+    content: "]";
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+#textForD{
+    font-family: 'Deradioh' !important;
+    font-size: 26;
+    font-weight: 100;
+}
+#textForE{
+    font-family: 'EurostileBQ' !important;
+    font-size: 110px;
+    font-weight: 100;
+    color: #fcfad8;
+}
+#textForP{
+    font-family: 'Futura' !important;
+    font-size: 25px;
+    font-weight: 100;
+    color: #fcfad8;
+}
+
+.mouse-icon {
+    opacity: 0.8;
+    animation: mouse-scroll 1.5s infinite;
+}
+
+.navbar{
+display: flex;
+margin-right: 96px;
+gap:100px;
+}
+
+.hamburger div {
+    transition: all 0.3s ease;
+  }
+  .hamburger.open .line1 {
+    transform: rotate(45deg) translateY(10px);
+  }
+  .hamburger.open .line2 {
+    opacity: 0;
+  }
+  .hamburger.open .line3 {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-9px);
+  }
+
+
+@keyframes mouse-scroll {
+    0% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(10px); opacity: 0.4; }
+    100% { transform: translateY(0); opacity: 0.8; }
+}
+/* tablet */
+@media screen and (min-width:768px) and  (max-width:1023px) {
+    #main{
+        background-size:cover;
+        background-attachment:local;
+    }
+    #textForE{
+        font-size:60px;
+    }
+    .navbar{
+        display: none;
+    }
+    
+}
+
+/* mobile */
+@media  screen and (max-width:767px){
+    .navbar{
+        font-size:smaller;
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+        display: none;
+
+    }
+    #textForE{
+        font-size:30px;
+    }
+    #textForP{
+        font-size: 22px;
+    }
+    #num1{
+        font-size: 15px;
+    } 
+    #num2{
+        font-size: 15px;
+    }
+    #num3{
+        font-size: 15px;
+    }
+
+    #main{
+        background-size: cover;
+        background-attachment: local;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+
+    }
+}
+    

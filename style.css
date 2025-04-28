@@ -60,7 +60,7 @@ p{
     background-repeat: no-repeat;
 }
 #Projects {
-    background-image: url(''); /* Replace with your actual image */
+    background-image: url('https://marsspace.ae/images/projectbg.png'); /* Replace with your actual image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,11 +70,14 @@ p{
     height: 1200px;
     object-fit: cover;
 }
+
 #projectFg {
     width: 800px;
     height: 800px;
     object-fit: cover;
 }
+
+
 #sub {
     background-image: url('./images/subiusdiary.png');
     background-size: cover;
@@ -104,8 +107,8 @@ p{
     margin-top: -150px;
 }
 footer {
-    background-image: url('./images/footer.png');
-    background-size: cover;
+    background-image: url('https://marsspace.ae/images/footer.png');
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000000;
@@ -114,7 +117,7 @@ footer {
     height: 100vh;
 }
 #gov{
-    background-image: url('./images/UAE-GOVT-APPROVEL-bg.jpg');
+    background-image: url('https://marsspace.ae/images/UAE-GOVT-APPROVEL-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

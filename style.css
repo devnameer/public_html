@@ -30,6 +30,17 @@ p{
     margin-top: 0;
 }
 
+@media screen and (max-width:768px){
+    #main{
+        background-position:60%;
+        background-size: contain;
+    }
+    
+}
+
+
+
+
 #logo {
     width: 80px !important;
     margin-top: -25px !important;
